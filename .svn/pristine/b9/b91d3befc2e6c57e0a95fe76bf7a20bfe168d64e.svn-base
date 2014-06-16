@@ -1,0 +1,26 @@
+<div class="panel panel-default panel-profile">
+  <div class="panel-body">
+    <table>
+    	<tr>
+    		<td>
+    			<img height="120" width="120" src= <?php echo $profile_pic;?> >
+    		</td>
+    		<td valign="top">
+    			<div class="info-margin">
+    				<span class="profile-user">Ynah Gaile M. Eulogio</span><br />
+    				<span class="info">ynah.eulogio@yahoo.com</span>
+    			</div>
+    			
+    		</td>
+    	</tr>
+    </table>
+  </div>
+</div>
+
+<div class="panel panel-default panel-post">
+    <form action="post">
+    	<textarea name="content" placeholder="Share something"></textarea>
+        <hr style="border-color: #C8C8C8;" />
+    	<button type="button" class="btn btn-primary post-button" name="post">Post</button>
+    </form>
+</div>

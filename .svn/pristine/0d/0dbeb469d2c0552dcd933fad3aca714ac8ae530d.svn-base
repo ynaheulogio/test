@@ -1,0 +1,26 @@
+Home/Post (for fb trial)
+1. Type what you want to post.
+2. Click post.
+3. Save post to database
+4. post 'post' to facebook
+5. post 'post' to home.
+
+Home/Post (twitter/fb)
+
+Forgot Password/Reset Password
+
+Database: Playon
+Table 1: user
+	1user_id (auto inc)
+	2user_facebook
+	3user_name
+	4user_password
+	5user_email
+	6user_created
+	
+Table 2: post
+	1post_id
+	2post_author
+	3post_content
+	4post_created
+	5post_updated*

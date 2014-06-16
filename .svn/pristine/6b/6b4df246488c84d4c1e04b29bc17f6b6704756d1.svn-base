@@ -1,0 +1,60 @@
+<?php //-->
+/*
+ * This file is part a custom application package.
+ */
+
+/**
+ * Default logic to output a page
+ */
+class Playon_Page_Facebookauth extends Playon_Page {
+	/* Constants
+	-------------------------------*/
+	/* Public Properties
+	-------------------------------*/
+	/* Protected Properties
+	-------------------------------*/
+	protected $_title = NULL;
+	protected $_class = NULL;
+	protected $_template = NULL;
+	
+	/* Private Properties
+	-------------------------------*/
+	/* Magic
+	-------------------------------*/
+	/* Public Methods
+	-------------------------------*/
+	public function render() {
+
+		$fb_key = '749983318379949';
+		$fb_secret = '4e4c82bb64b4508ca8d757440a7638fa';
+		$redirect = 'http://www.playon.com/facebookauth';
+		$permissions = array('email', 'publish_stream');
+
+		//session_destroy();
+		//exit;
+		//get auth
+		$auth = eden('facebook')->auth($fb_key, $fb_secret, $redirect);
+
+		if(!isset($_GET['code']) && !isset($_SESSION['access_token'])) {
+		    //redirect to login
+		    $loginUrl = $auth->getLoginUrl($permissions);
+		    //echo $loginUrl;
+		    header('Location: '.$loginUrl);
+		    exit;
+		}
+		 
+		//Code is returned back from facebook
+		if(isset($_GET['code'])) {
+		    //save it to session
+		    $access = $auth->getAccess($_GET['code']);
+		    $_SESSION['access_token'] = $access['access_token'];
+		}
+
+		return $this->_page();
+	}
+	
+	/* Protected Methods
+	-------------------------------*/
+	/* Private Methods
+	-------------------------------*/
+}

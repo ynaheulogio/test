@@ -1,0 +1,24 @@
+<div class="panel panel-default panel-profile">
+  <div class="panel-body">
+    <table>
+    	<tr>
+    		<td>
+    			<img src="assets/image/dp.png" height="100" width="100">
+    		</td>
+    		<td valign="top">
+    			<div class="info-margin">
+    				<span class="profile-user">Ynah Gaile M. Eulogio</span><br />
+    				<span class="info">ynah.eulogio@yahoo.com</span>
+    			</div>
+    			
+    		</td>
+    	</tr>
+    </table>
+  </div>
+</div>
+
+<div class="panel panel-default panel-post">
+	<textarea placeholder="Share something"></textarea>
+	 <button type="button" class="btn btn-primary post-button">Post</button>
+
+</div>

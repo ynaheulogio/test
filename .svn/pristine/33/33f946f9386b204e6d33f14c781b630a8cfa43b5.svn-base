@@ -1,0 +1,46 @@
+<div class="body-container">
+    <div class="panel panel-default panel-profile">
+      <div class="panel-body">
+        <table>
+        	<tr>
+        		<td>
+        			<img height="120" width="120" src= "http://graph.facebook.com/<?php echo $id; ?>/picture" >
+        		</td>
+        		<td valign="top">
+        			<div class="info-margin">
+        				<span class="profile-user"><?php echo $name; ?></span><br />
+        				<span class="info"><?php echo $email; ?></span>
+        			</div>
+        			
+        		</td>
+        	</tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel panel-default panel-post">
+        <form action="post">
+        	<textarea name="content" placeholder="Share something"></textarea>
+            <hr style="border-color: #C8C8C8;" />
+        	<button type="button" class="btn btn-primary post-button" name="post">Post</button>
+        </form>
+    </div>
+    
+    <div class="panel panel-default panel-post post">
+        <div class="post-info">
+            <table>
+            <td>
+                <img height="50" width="50" src= "http://graph.facebook.com/<?php echo $id; ?>/picture" >
+            </td>
+            <td valign="top" class="post-user">
+                <div class="info-margin">
+                    <?php echo $name; ?>
+                </div>
+            </td>
+        </table>
+        </div>
+        <hr style="border-color: #C8C8C8;" />
+        
+    </div>
+
+</div>

@@ -1,0 +1,54 @@
+<?php //-->
+/*
+ * This file is part a custom application package.
+ */
+
+/**
+ * Default logic to output a page
+ */
+class Playon_Page_Index extends Playon_Page {
+	/* Constants
+	-------------------------------*/
+	/* Public Properties
+	-------------------------------*/
+	/* Protected Properties
+	-------------------------------*/
+	protected $_title = 'Playon';
+	protected $_class = 'home';
+	protected $_template = '/index.phtml';
+	
+	/* Private Properties
+	-------------------------------*/
+	/* Magic
+	-------------------------------*/
+	/* Public Methods
+	-------------------------------*/
+	public function render() {
+		if(isset($_SESSION['email'])) {
+			header('Location: http://playon.com/home');
+		}
+
+		// $users = playon()->User()->getUsers();
+		// $emails=array('ynah.eulogio@yahoo.com', 'gaile@gmail.com');
+		// $_SESSION['email']='ynah.eulogio@yahoo.com';
+		// foreach ($emails as $key => $value) {
+		// 	foreach ($users[0] as $key => $value) {
+		// 			if($value=)
+		// 		}
+		// }
+		// foreach ($emails as $key1 => $value1) {
+		// 		if($_SESSION['email']==$value1) {
+		// 			echo 'already a user';
+		// 			exit;
+		// 		}
+		// 	}
+
+		
+		return $this->_page();
+	}
+	
+	/* Protected Methods
+	-------------------------------*/
+	/* Private Methods
+	-------------------------------*/
+}

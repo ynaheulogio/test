@@ -1,0 +1,33 @@
+<div class="head">
+	<img src="/assets/image/logo1.png" width="150" height="45">
+</div>
+
+<div class="index">
+	<img src="/assets/image/po-quote.png">
+</div>
+
+
+
+<div class="foot-container">
+	<a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#myModal">L&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;</a> 
+	|
+	<a class="login" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;U&nbsp;&nbsp;&nbsp;P</a>	
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-width">
+    <div class="modal-content modal-height">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Log In</h4>
+      </div>
+      <div class="modal-body login-body-container">
+        <form action="post">
+         <a class="fb_link" href="/facebookauth"><button name="fb" type="button" class="btn btn-primary fb"><img src="/assets/image/fb-icon.png">  Log In with Facebook</button></a><br />
+         &mdash;or&mdash;<br />
+         <button type="button" class="btn btn-primary twitter"><img src="/assets/image/twitter.png">  Log In with Twitter</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

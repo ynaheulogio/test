@@ -1,0 +1,42 @@
+<?php //-->
+/*
+ * This file is part a custom application package.
+ */
+
+/**
+ * Default logic to output a page
+ */
+class Playon_Page_Home extends Playon_Page {
+	/* Constants
+	-------------------------------*/
+	/* Public Properties
+	-------------------------------*/
+	/* Protected Properties
+	-------------------------------*/
+	protected $_title = 'Playon';
+	protected $_class = 'home';
+	protected $_template = '/home.phtml';
+	
+	/* Private Properties
+	-------------------------------*/
+	/* Magic
+	-------------------------------*/
+	/* Public Methods
+	-------------------------------*/
+	public function render() {
+
+		$graph = eden('facebook')->graph($_SESSION['fb_token']);
+		$user_info = $graph->getUser();
+		//print_r($user_info);
+		$profile_pic = 'http://graph.facebook.com/'. $user_info['id'] .'/picture';
+
+		return $this->_page();
+	}
+
+
+}
+	
+	/* Protected Methods
+	-------------------------------*/
+	/* Private Methods
+	-------------------------------*/

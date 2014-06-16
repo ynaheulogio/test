@@ -1,0 +1,22 @@
+<?php
+
+class User extends Eden_Class {
+	public $database = NULL;
+
+	public function __construct(){
+		$this->_app = Eden::i()->getActiveApp();
+		$this->database = $this->_app->database();
+	}
+
+	//adds new user to database
+	public function insertNewUser($tableName = NULL, $settings = NULL) {
+		$this->database->insertRow($tableName, $settings);
+	}
+
+
+	public function getData() {
+		$this->database->getRows('user');
+	}
+	//update database
+	
+}

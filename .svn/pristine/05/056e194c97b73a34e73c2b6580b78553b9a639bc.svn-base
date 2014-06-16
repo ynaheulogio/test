@@ -1,0 +1,53 @@
+Log In
+1. Log In using facebook?
+	1.1. If yes, click 1st button on modal
+	1.2. Proceed to facebook auth
+		1.2.1. Check if already a user
+			1.2.1.1. If no, 
+						get access token, save it on database.
+						get user info through graph: name, id, email
+			1.2.1.2. If yes, update access token
+2. Log In using twitter?
+
+
+
+Home/Post
+1. Type what you want to post.
+2. Click post.
+3. Save post to database
+4. post 'post' to facebook
+5. post 'post' to home.
+
+Home/Post (twitter/fb)
+
+Forgot Password/Reset Password
+
+Database: Playon
+Table 1: user
+	1user_id (auto inc)
+	2user_facebook
+	3user_name
+	4user_password
+	5user_email
+	6user_facebook_token
+	7user_created
+	
+Table 2: post
+	1post_id
+	2post_author
+	3post_content
+	4post_created
+	5post_updated*
+
+			$graph = eden('facebook')->graph($_SESSION['fb_token']);
+			$userinfo = $graph->getUser();
+			$_SESSION['email'] = $userinfo['email'];
+
+			$name = $userinfo['first_name'] . ' ' . $userinfo['last_name'];
+			$settings = array(
+						'user_name' = $name,
+						'user_facebook' = $userinfo['id'],
+						'user_email' = $userinfo['email']
+						);
+			
+			playon()->User()->InsertNewUser();

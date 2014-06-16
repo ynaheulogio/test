@@ -1,0 +1,153 @@
+a.fb_link {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+a.login {
+	text-decoration: none;
+	color: #202020;
+}
+
+a.login:hover {
+	text-decoration: none;
+	color: #202020;
+}
+
+
+body {
+	background-image: url(/assets/image/bg.png);
+	background-attachment:fixed;
+	background-position: top center;
+	background-repeat: no-repeat;
+	display: block;
+	background-size:cover;
+    font-family: 'Josefin Slab', serif;
+    margin-top: 80px;
+}
+
+.fb {
+	margin-bottom: 5px;
+	width: 200px;
+	text-align: center;
+}
+
+.twitter {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 200px;
+	text-align: center;
+	background-color: #4099FF;
+}
+
+.twitter:hover {
+	background-color: #4099FF;
+	border-color: #4099FF;
+}
+
+.twitter:active {
+	background-color: #4099FF;
+}
+
+.index {
+	position: absolute;
+	top: 210px;
+	left: 5px;
+}
+
+.head {
+	position: absolute;
+	top: 30px;
+	left: 23px;
+}
+
+.info {
+	font-size: 15px;
+}
+
+.info-margin {
+	margin-left: 10px;
+}
+
+.foot-container {
+	position: absolute;
+	bottom: 35px;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+.login-body-container {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.logo-margin{
+	margin-left: -15px;
+}
+
+.modal-width {
+	width: 300px;
+}
+
+.modal-height {
+	height: 280px;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #F0F0F0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel-post {
+	width: 650px;
+	height: 195px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.panel-posts {
+	width: 650px;
+	height: 200px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.panel-profile {
+	width: 650px;
+	height: 150px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.post-button {
+	margin-top: -8px;
+	margin-left: 580px;
+}
+
+.profile-user {
+	font-size: 25px;
+}
+
+textarea {
+	margin-top: 20px;
+	margin-left: 20px;
+    overflow: auto;
+    outline: none;
+	resize: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    width: 600px;
+	height: 90px;
+	background-color: #F0F0F0;
+}
+
+

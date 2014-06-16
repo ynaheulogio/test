@@ -1,0 +1,37 @@
+<?php //-->
+/*
+ * This file is part a custom application package.
+ */
+
+/**
+ * Default logic to output a page
+ */
+class Playon_Page_Index extends Playon_Page {
+	/* Constants
+	-------------------------------*/
+	/* Public Properties
+	-------------------------------*/
+	/* Protected Properties
+	-------------------------------*/
+	protected $_title = 'Playon';
+	protected $_class = 'home';
+	protected $_template = '/index.phtml';
+	
+	/* Private Properties
+	-------------------------------*/
+	/* Magic
+	-------------------------------*/
+	/* Public Methods
+	-------------------------------*/
+	public function render() {
+
+		//print_r($_SESSION);
+		playon()->User()->test();
+		return $this->_page();
+	}
+	
+	/* Protected Methods
+	-------------------------------*/
+	/* Private Methods
+	-------------------------------*/
+}

@@ -1,0 +1,14 @@
+<?php
+
+class User extends Eden_Class {
+	public function __construct(){
+		$this->_app = Eden::i()->getActiveApp();
+		$database = $this->_app->database();
+	}
+
+	//add data to database
+	//update database
+	public function test(){
+		
+	}
+}
